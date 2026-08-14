@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8">
+<database name="stardew-tracker" defaultIdMethod="native">
+    <table name="item" phpName="Item">
+    </table>
+    <table name="bundle" phpName="Bundle">
+    </table>
+    <table name="room" phpName="Room">
+    </table>
+</database>
