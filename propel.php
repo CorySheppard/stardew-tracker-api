@@ -6,6 +6,7 @@ return [
             'connections' => [
                 'stardew-tracker' => [
                     'adapter' => 'mysql',
+                    'classname'  => 'Propel\Runtime\Connection\ConnectionWrapper',
                     'dsn' => 'mysql:host=localhost;dbname=stardew-tracker',
                     'user' => 'root',
                     'password' => '',
