@@ -1,6 +1,7 @@
 <?php
+/** @var \Propel\Runtime\ServiceContainer\StandardServiceContainer $serviceContainer */
 $serviceContainer = \Propel\Runtime\Propel::getServiceContainer();
-$serviceContainer->initDatabaseMaps(array (
+$serviceContainer->initDatabaseMapFromDumps(array (
   'stardew-tracker' => 
   array (
     'tablesByName' => 
