@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8">
 <database name="stardew-tracker" defaultIdMethod="native">
-    <table name="users" phpName="User">
-        
+    <table name="user" phpName="User">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true" />
+        <column name="username" type="varchar" size="255" required="true" />
+        <column name="email" type="varchar" size="255" required="true" />
+        <column name="password_hash" type="varchar" size="255" required="true" />
+        <column name="created_at" type="timestamp" require="true" defaultExpr="current_timestamp" />
+        <column name="updated_at" type="timestamp" require="true" defaultExpr="current_timestamp" />
     </table>
 </database>
