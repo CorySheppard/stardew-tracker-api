@@ -120,6 +120,8 @@ class ComposerStaticInitbf16637f4265b04e0aa0f6e67bd726eb
     );
 
     public static $classMap = array (
+        'Base\\User' => __DIR__ . '/../..' . '/generated-classes/Base/User.php',
+        'Base\\UserQuery' => __DIR__ . '/../..' . '/generated-classes/Base/UserQuery.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'DateError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
         'DateException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateException.php',
@@ -130,9 +132,12 @@ class ComposerStaticInitbf16637f4265b04e0aa0f6e67bd726eb
         'DateMalformedStringException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateMalformedStringException.php',
         'DateObjectError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateObjectError.php',
         'DateRangeError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateRangeError.php',
+        'Map\\UserTableMap' => __DIR__ . '/../..' . '/generated-classes/Map/UserTableMap.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'Override' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/Override.php',
         'SQLite3Exception' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/SQLite3Exception.php',
+        'User' => __DIR__ . '/../..' . '/generated-classes/User.php',
+        'UserQuery' => __DIR__ . '/../..' . '/generated-classes/UserQuery.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
