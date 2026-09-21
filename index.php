@@ -2,4 +2,6 @@
 
 include './propelSetup.php';
 
-echo "Hello, World!";
+$parts = explode('/', $_SERVER['REQUEST_URI']);
+
+print_r($parts);
