@@ -1,6 +1,7 @@
 {
     "require": {
-        "propel/propel": "~2.0@beta"
+        "propel/propel": "~2.0@beta",
+        "monolog/monolog": "^3.12"
     },
     "autoload": {
         "classmap": ["generated-classes/"]

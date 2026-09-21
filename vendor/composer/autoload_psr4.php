@@ -24,4 +24,5 @@ return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Propel\\' => array($vendorDir . '/propel/propel/src/Propel'),
+    'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
 );

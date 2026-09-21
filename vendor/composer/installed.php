@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'c4790addf749ddd43a5d6df9b84e15dfc19e431e',
+        'reference' => 'dd248bb0cec3aba2735f6610dd9cb69fcdfaf08b',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,9 +13,18 @@
         '__root__' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'c4790addf749ddd43a5d6df9b84e15dfc19e431e',
+            'reference' => 'dd248bb0cec3aba2735f6610dd9cb69fcdfaf08b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'monolog/monolog' => array(
+            'pretty_version' => '3.12.0',
+            'version' => '3.12.0.0',
+            'reference' => '72c534fc0ab181ef52d92a68382318631e301608',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../monolog/monolog',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -50,6 +59,7 @@
             'dev_requirement' => false,
             'provided' => array(
                 0 => '1.0|2.0|3.0',
+                1 => '3.0.0',
             ),
         ),
         'symfony/config' => array(
