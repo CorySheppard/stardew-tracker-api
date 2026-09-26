@@ -213,8 +213,8 @@ class UserTableMap extends TableMap
         $this->addColumn('username', 'Username', 'VARCHAR', true, 255, null);
         $this->addColumn('email', 'Email', 'VARCHAR', true, 255, null);
         $this->addColumn('password_hash', 'PasswordHash', 'VARCHAR', true, 255, null);
-        $this->addColumn('created_at', 'CreatedAt', 'TIMESTAMP', false, null, 'current_timestamp');
-        $this->addColumn('updated_at', 'UpdatedAt', 'TIMESTAMP', false, null, 'current_timestamp');
+        $this->addColumn('created_at', 'CreatedAt', 'TIMESTAMP', true, null, 'current_timestamp');
+        $this->addColumn('updated_at', 'UpdatedAt', 'TIMESTAMP', true, null, 'current_timestamp');
     }
 
     /**

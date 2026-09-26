@@ -5,7 +5,7 @@
         <column name="username" type="varchar" size="255" required="true" />
         <column name="email" type="varchar" size="255" required="true" />
         <column name="password_hash" type="varchar" size="255" required="true" />
-        <column name="created_at" type="timestamp" require="true" defaultExpr="current_timestamp" />
-        <column name="updated_at" type="timestamp" require="true" defaultExpr="current_timestamp" />
+        <column name="created_at" type="timestamp" required="true" defaultExpr="current_timestamp" />
+        <column name="updated_at" type="timestamp" required="true" defaultExpr="current_timestamp" />
     </table>
 </database>

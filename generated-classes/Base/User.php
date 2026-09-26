@@ -95,7 +95,7 @@ abstract class User implements ActiveRecordInterface
      * The value for the created_at field.
      *
      * Note: this column has a database default value of: (expression) current_timestamp
-     * @var        DateTime|null
+     * @var        DateTime
      */
     protected $created_at;
 
@@ -103,7 +103,7 @@ abstract class User implements ActiveRecordInterface
      * The value for the updated_at field.
      *
      * Note: this column has a database default value of: (expression) current_timestamp
-     * @var        DateTime|null
+     * @var        DateTime
      */
     protected $updated_at;
 
@@ -400,11 +400,11 @@ abstract class User implements ActiveRecordInterface
      * @param string|null $format The date/time format string (either date()-style or strftime()-style).
      *   If format is NULL, then the raw DateTime object will be returned.
      *
-     * @return string|DateTime|null Formatted date/time value as string or DateTime object (if format is NULL), NULL if column is NULL, and 0 if column value is 0000-00-00 00:00:00.
+     * @return string|DateTime Formatted date/time value as string or DateTime object (if format is NULL), and 0 if column value is 0000-00-00 00:00:00.
      *
      * @throws \Propel\Runtime\Exception\PropelException - if unable to parse/validate the date/time value.
      *
-     * @psalm-return ($format is null ? DateTime|null : string|null)
+     * @psalm-return ($format is null ? DateTime : string)
      */
     public function getCreatedAt(?string $format = null)
     {
@@ -422,11 +422,11 @@ abstract class User implements ActiveRecordInterface
      * @param string|null $format The date/time format string (either date()-style or strftime()-style).
      *   If format is NULL, then the raw DateTime object will be returned.
      *
-     * @return string|DateTime|null Formatted date/time value as string or DateTime object (if format is NULL), NULL if column is NULL, and 0 if column value is 0000-00-00 00:00:00.
+     * @return string|DateTime Formatted date/time value as string or DateTime object (if format is NULL), and 0 if column value is 0000-00-00 00:00:00.
      *
      * @throws \Propel\Runtime\Exception\PropelException - if unable to parse/validate the date/time value.
      *
-     * @psalm-return ($format is null ? DateTime|null : string|null)
+     * @psalm-return ($format is null ? DateTime : string)
      */
     public function getUpdatedAt(?string $format = null)
     {
@@ -520,7 +520,7 @@ abstract class User implements ActiveRecordInterface
     /**
      * Sets the value of [created_at] column to a normalized version of the date/time value specified.
      *
-     * @param string|integer|\DateTimeInterface|null $v string, integer (timestamp), or \DateTimeInterface value.
+     * @param string|integer|\DateTimeInterface $v string, integer (timestamp), or \DateTimeInterface value.
      *               Empty strings are treated as NULL.
      * @return $this The current object (for fluent API support)
      */
@@ -540,7 +540,7 @@ abstract class User implements ActiveRecordInterface
     /**
      * Sets the value of [updated_at] column to a normalized version of the date/time value specified.
      *
-     * @param string|integer|\DateTimeInterface|null $v string, integer (timestamp), or \DateTimeInterface value.
+     * @param string|integer|\DateTimeInterface $v string, integer (timestamp), or \DateTimeInterface value.
      *               Empty strings are treated as NULL.
      * @return $this The current object (for fluent API support)
      */

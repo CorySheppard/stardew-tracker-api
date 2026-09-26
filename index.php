@@ -4,8 +4,13 @@ declare(strict_types=1);
 include './propelSetup.php';
 
 spl_autoload_register(function ($class) {
-    require __DIR__ . "/src/$class.php";
+    $file = __DIR__ . "/src/$class.php";
+    if (file_exists($file)) {
+        require $file;
+    }
 });
+
+set_exception_handler("ErrorHandler::handleException");
 
 header("Content-type: application/json; charset=UTF-8");
 
@@ -19,6 +24,7 @@ if ($parts[1] != "user") {
 
 $id = $parts[2] ?? null;
 
-$controller = new UserController;
+$gateway = new UserGateway;
+$controller = new UserController($gateway);
 
 $controller->processRequest($_SERVER['REQUEST_METHOD'], $id);

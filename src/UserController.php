@@ -2,6 +2,10 @@
 
 class UserController
 {
+    public function __construct(private UserGateway $gateway)
+    {
+    }
+
     public function processRequest(string $method, ?string $id): void 
     {
         if ($id) {
@@ -20,7 +24,7 @@ class UserController
     {
         switch ($method) {
             case "GET":
-                echo json_encode(["id" => 123]);
+                echo json_encode($this->gateway->getAll());
                 break;
         }
     }
