@@ -29,12 +29,41 @@ class UserController
             
             case "POST":
                 $data = (array) json_decode(file_get_contents("php://input"), true);
+
+                $errors = $this->getValidationErrors($data);
+
+                if (!empty($errors)) {
+                    http_response_code(422);
+                    echo json_encode(["errors" => $errors]);
+                    break;
+                }
+
                 $id = $this->gateway->create($data);
+                http_response_code(201);
                 echo json_encode([
                     "message" => "User created",
                     "id" => $id
                 ]);
                 break;
         }
+    }
+
+    private function getValidationErrors(array $data): array
+    {
+        $errors = [];
+
+        if (empty($data["username"])) {
+            $errors[] = "A username is required";
+        }
+
+        if (empty($data["email"])) {
+            $errors[] = "An email is required";
+        }
+
+        if (empty($data["password"])) {
+            $errors[] = "A password is required";
+        }
+
+        return $errors;
     }
 }
